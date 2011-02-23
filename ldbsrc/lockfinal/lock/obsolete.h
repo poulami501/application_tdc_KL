@@ -1,4 +1,4 @@
-/* $Id: obsolete.h,v 1.1.2.1 2009/11/11 22:32:34 ncohen Exp $ */
+/* $Id: obsolete.h,v 1.1.6.1 2010/07/31 00:53:01 ayanb Exp $ */
 /*
  * Copyright (C) 1998-2004 RSA Security Inc. All rights reserved. 
  *
