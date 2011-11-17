@@ -557,11 +557,11 @@ public class ServletUtils {
 	 *
 	 */
 	public static String getTmsURLString(String method) {
-		MemoryCache memoryCache = MemoryCache.getInstance();
-		ServletSettings srvSettings = memoryCache.getSrvSettings();
-		String tmsHostPort = srvSettings.getTmsHostPort();
-		String tmsWebApp = getWebAppName(method);
-		return (tmsHostPort + tmsWebApp);
+			MemoryCache memoryCache = MemoryCache.getInstance();
+			ServletSettings srvSettings = memoryCache.getSrvSettings();
+			String tmsHostPort = srvSettings.getTmsHostPort();
+			String tmsWebApp = getWebAppName(method);
+			return (tmsHostPort + tmsWebApp);
 	}
 
 	/**
@@ -818,6 +818,9 @@ public class ServletUtils {
 	 */
 	public static String httpClientSendRequest(String method, String xml) {
 		synchronized(client) {
+			if(!method.equals(ServletUtils.DOWNLOAD_ITEM_METHOD) && !method.equals(ServletUtils.DOWNLOAD_CONTENT_METHOD)) {
+				System.out.println(xml);
+			}
 			String result = OK;
 			int responseCode = HttpStatus.SC_OK;
 	
@@ -857,6 +860,9 @@ public class ServletUtils {
 			}
 			finally {
 				//post.releaseConnection();
+			}
+			if(!method.equals(ServletUtils.DOWNLOAD_ITEM_METHOD) && !method.equals(ServletUtils.DOWNLOAD_CONTENT_METHOD)) {
+				System.out.println(result);
 			}
 			return result;
 		}
