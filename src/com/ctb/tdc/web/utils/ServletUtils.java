@@ -500,6 +500,31 @@ public class ServletUtils {
 			return false;
 		}
 	}
+	
+	public static boolean validateProxySettings() {
+		ServletSettings srvSettings = null;
+		MemoryCache memoryCache = MemoryCache.getInstance();
+		ResourceBundle rbProxy = null;
+		if (! memoryCache.isLoaded()) {
+			try {
+				rbProxy = ResourceBundle.getBundle(PROXY_NAME);
+				srvSettings = new ServletSettings(rbProxy);
+				memoryCache.setSrvSettings(srvSettings);
+				memoryCache.setLoaded(true);
+			}
+			catch (MissingResourceException e) {
+				logger.error("Exception occured in validateProxySettings() : " + printStackTrace(e));
+				return false;
+			}
+		}
+		srvSettings = memoryCache.getSrvSettings();
+		boolean proxyOK = setupProxy();
+		if(proxyOK) {
+			return true;
+		} else {
+			return false;
+		}
+	}
 
 	/**
 	 * getServletSettingsErrorMessage
