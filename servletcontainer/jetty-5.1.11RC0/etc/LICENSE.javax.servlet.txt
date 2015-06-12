@@ -1,7 +1,7 @@
 /*
- * $Header$
- * $Revision$
- * $Date$
+ * $Header: /oascvs/application-tdc/servletcontainer/jetty-5.1.11RC0/etc/LICENSE.javax.servlet.txt,v 1.1 2009/12/29 21:54:56 ncohen Exp $
+ * $Revision: 1.1 $
+ * $Date: 2009/12/29 21:54:56 $
  *
  * ====================================================================
  * 

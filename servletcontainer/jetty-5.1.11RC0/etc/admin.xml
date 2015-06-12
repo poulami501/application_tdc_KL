@@ -12,7 +12,7 @@ The format of this file is described in the configure.dtd file.
 The API that can be called by this file is described in the
 Javadoc for Jetty.
 
-$Id$
+$Id: admin.xml,v 1.1 2009/12/29 21:54:56 ncohen Exp $
 -->
 
 <Configure class="org.mortbay.jetty.Server">

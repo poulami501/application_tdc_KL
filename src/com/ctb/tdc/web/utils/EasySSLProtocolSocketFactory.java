@@ -1,7 +1,7 @@
 /*
- * $Header: /oascvs/application-tdc/src/com/ctb/tdc/web/utils/Attic/EasySSLProtocolSocketFactory.java,v 1.1.6.2 2011/02/23 06:59:45 ayanb Exp $
- * $Revision: 1.1.6.2 $
- * $Date: 2011/02/23 06:59:45 $
+ * $Header: /oascvs/application-tdc/src/com/ctb/tdc/web/utils/EasySSLProtocolSocketFactory.java,v 1.2 2012/08/20 13:55:14 santhana Exp $
+ * $Revision: 1.2 $
+ * $Date: 2012/08/20 13:55:14 $
  * 
  * ====================================================================
  *
